@@ -1,23 +1,24 @@
 
 import useCitie from "./useCitie";
-import TopBox from "./TopBox";
 
 function Leftbox() {
+
 const {data, city, all,changeCity,handleFuture} = useCitie()
-let nombre = ''
-data?nombre = data.name:null
+
+
 const ocultar = ((elementoOcultar,elementoMostrar)=>{
+
   const p1 = document.getElementById(elementoOcultar)
   const p2 = document.getElementById(elementoMostrar)
+
   p1.style.display='none'
   p2.style.display='block'
 })
 
 return (
-    <div className="leftBox">
+    <div >
       {data !== null ? (
         <div id='allLeftbox'>
-          <TopBox miProp ={data.name}></TopBox>
           <div className="buttons">
             <button className="search" onClick={()=>ocultar('allLeftbox','firstDiv-Second')}>Search for places</button>
             <button className="btc">c</button>
@@ -31,17 +32,6 @@ return (
           </div>
         </div>
       ) : null}
-      <div id="firstDiv-Second">
-      <button onClick={()=>ocultar('firstDiv-Second','allLeftbox')}>cerrar</button>
-      <form onSubmit={changeCity}>
-          <input type="text" placeholder="enter a city" id="inputC" />
-          {/* <ul>
-          {all?.results.map((el,i) => (<li key={i}>{el.name}</li>))}
-          </ul> */}
-        <button type="submit"> double click</button>
-        </form>
-      </div>
-      
     </div>
   );
 }

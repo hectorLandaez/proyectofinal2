@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 function useCitie() {
   const [data, setData] = useState(null);
   const [city, setCity] = useState("lima");
