@@ -8,25 +8,25 @@ const {data,future} = useCitie()
 const mimg = (root) => {
   let imagen = "/src/assets/weather-app-master/LightCloud.png";
     if (data.weather[root].main === "light rain") {
-      imagen = "/src/assets/weather-app-master/LightRain.png";
+      imagen = "src/assets/weather-app-master/LightRain.png";
     } else if (data.weather[root].main === "moderate rain") {
-      imagen = "/src/assets/weather-app-master/Shower.png";
+      imagen = "src/assets/weather-app-master/Shower.png";
     } else if (data.weather[root].main === "overcast clouds") {
-      imagen = "/src/assets/weather-app-master/HeavyCloud.png";
+      imagen = "src/assets/weather-app-master/HeavyCloud.png";
     } else if (data.weather[root].main === "broken clouds") {
-      imagen = "/src/assets/weather-app-master/LightCloud.png";
+      imagen = "src/assets/weather-app-master/LightCloud.png";
     } else if (data.weather[root].main === "clear sky") {
-      imagen = "/src/assets/weather-app-master/Clear.png";
+      imagen = "src/assets/weather-app-master/Clear.png";
     } else if (data.weather[root].main === "heavy rain") {
-      imagen = "/src/assets/weather-app-master/HeavyRain.png";
+      imagen = "src/assets/weather-app-master/HeavyRain.png";
     } else if (data.weather[root].main === "thunder storm") {
-      imagen = "/src/assets/weather-app-master/Thunderstorm.png";
+      imagen = "src/assets/weather-app-master/Thunderstorm.png";
     } else if (data.weather[root].main === "sleet") {
-      imagen = "/src/assets/weather-app-master/Sleet.png";
+      imagen = "src/assets/weather-app-master/Sleet.png";
     } else if (data.weather[root].main === "light rain") {
-      imagen = "/src/assets/weather-app-master/LightRain.png";
+      imagen = "src/assets/weather-app-master/LightRain.png";
     } else if (data.weather[root].main === "snow") {
-      imagen = "/src/assets/weather-app-master/Snow.png";
+      imagen = "src/assets/weather-app-master/Snow.png";
     }
     return imagen;
   } 
