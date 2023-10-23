@@ -6,7 +6,7 @@ function TopBox(props) {
   const mimg = (root) => {
     let imagen = "/src/assets/weather-app-master/LightCloud.png";
     if (future.list[root].weather[0].description === "light rain") {
-      imagen = "/src/assets/weather-app-master/LightRain.png";
+      imagen = "src/assets/weather-app-master/LightRain.png";
     } else if (future.list[root].weather[0].description === "moderate rain") {
       imagen = "/src/assets/weather-app-master/Shower.png";
     } else if (future.list[root].weather[0].description === "overcast clouds") {
