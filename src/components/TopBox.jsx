@@ -48,38 +48,36 @@ function TopBox(props) {
       {future ? (
         <div className="topBox">
           <div className="div1">
-            <div>{props.miProp}</div>;<div>{props.temp}</div>;
+            tomorrow
             <img src={mimg(2)} alt="time" />
             <span>
-              {props.temp} {props.temp2}
+              {props.temp}°c {props.temp2}°c
             </span>
           </div>
           <div className="div1">
             {convertirFecha(future.list[10].dt_txt)}
             <img src={mimg(10)} alt="time" />
-            <span>
-              {props.temp8}°c {props.temp10}°c
-            </span>
+            <span>{`${props.temp8}°c${props.temp10}°c`}</span>
           </div>
           <div className="div1">
             {convertirFecha(future.list[16].dt_txt)}
             <img src={mimg(16)} alt="time" />
             <span>
-              {props.temp16} {props.temp18}
+              {props.temp16}°c {props.temp18}°c
             </span>
           </div>
           <div className="div1">
             {convertirFecha(future.list[26].dt_txt)}
             <img src={mimg(26)} alt="time" />
             <span>
-              {props.temp24} {props.temp26}
+              {props.temp24}°c {props.temp26}°c
             </span>
           </div>
           <div className="div1">
             {convertirFecha(future.list[34].dt_txt)}
             <img src={mimg(34)} alt="time" />
             <span>
-              {props.temp32} {props.temp34}
+              {props.temp32}°c {props.temp34}°c
             </span>
           </div>
         </div>
