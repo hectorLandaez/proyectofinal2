@@ -3,40 +3,34 @@ import Leftbox from "./components/Leftbox";
 import RightBox from "./components/RightBox";
 import useCitie from "./components/useCitie";
 import TopBox from "./components/TopBox";
+import OCultar from "./components/Ocultar";
 
 function App() {
-  const { data, city, all, changeCity, handleFuture, future } = useCitie();
-
-  const ocultar = (elementoOcultar, elementoMostrar) => {
-    const p1 = document.getElementById(elementoOcultar);
-    const p2 = document.getElementById(elementoMostrar);
-
-    p1.style.display = "none";
-    p2.style.display = "block";
-  };
+  const { data, changeCity, future } = useCitie();
 
   return (
     <>
       {data !== null ? (
         <div className="main">
           <div className="leftBox">
-            <Leftbox></Leftbox>
-            <div id="firstDiv-Second"></div>
-            <button onClick={() => ocultar("firstDiv-Second", "allLeftbox")}>
-              cerrar
-            </button>
-            <form onSubmit={changeCity}>
-              <input type="text" placeholder="enter a city" id="inputC" />
-              {/* <ul>
-          {all?.results.map((el,i) => (<li key={i}>{el.name}</li>))}
-          </ul> */}
-              <button type="submit"> double click</button>
-            </form>
+            <Leftbox
+              temp={data.main.temp}
+              weather={data.weather[0].description}
+              name={data.name}
+            ></Leftbox>
+            <div id="firstDiv-Second">
+              <button onClick={() => OCultar("firstDiv-Second", "allLeftbox")}>
+                cerrar
+              </button>
+              <form onSubmit={changeCity}>
+                <input type="text" placeholder="enter a city" id="inputC" />
+                <button type="submit" onClick={() => OCultar("firstDiv-Second", "allLeftbox")}>search</button>
+              </form>
+            </div>
           </div>
           <div id="mid">
             {future ? (
               <TopBox
-                miProp={data.name}
                 temp={future.list[0].main.temp}
                 temp2={future.list[2].main.temp}
                 temp8={future.list[8].main.temp}
@@ -49,8 +43,12 @@ function App() {
                 temp34={future.list[34].main.temp}
               ></TopBox>
             ) : null}
-
-            <RightBox></RightBox>
+            <RightBox
+              speed={data.wind.speed}
+              humidity={data.main.humidity}
+              visibility={data.visibility}
+              pressure={data.main.pressure}
+            ></RightBox>
           </div>
         </div>
       ) : null}
