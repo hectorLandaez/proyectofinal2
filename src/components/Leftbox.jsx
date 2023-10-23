@@ -22,11 +22,11 @@ const mimg = (root) => {
     } else if (data.weather[root].main === "thunder storm") {
       imagen = "src/assets/weather-app-master/Thunderstorm.png";
     } else if (data.weather[root].main === "sleet") {
-      imagen = "src/assets/weather-app-master/Sleet.png";
+      imagen = "./assets/weather-app-master/Sleet.png";
     } else if (data.weather[root].main === "light rain") {
-      imagen = "src/assets/weather-app-master/LightRain.png";
+      imagen = "./assets/weather-app-master/LightRain.png";
     } else if (data.weather[root].main === "snow") {
-      imagen = "src/assets/weather-app-master/Snow.png";
+      imagen = "./assets/weather-app-master/Snow.png";
     }
     return imagen;
   } 
