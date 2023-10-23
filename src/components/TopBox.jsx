@@ -4,27 +4,27 @@ function TopBox(props) {
   const { future } = useCitie();
 
   const mimg = (root) => {
-    let imagen = "/src/assets/weather-app-master/LightCloud.png";
+    let imagen = "/src/assets/weatherLightCloud.png";
     if (future.list[root].weather[0].description === "light rain") {
-      imagen = "src/assets/weather-app-master/LightRain.png";
+      imagen = "/src/assets/weather/LightRain.png";
     } else if (future.list[root].weather[0].description === "moderate rain") {
-      imagen = "/src/assets/weather-app-master/Shower.png";
+      imagen = "/src/assets/weather/Shower.png";
     } else if (future.list[root].weather[0].description === "overcast clouds") {
-      imagen = "/src/assets/weather-app-master/HeavyCloud.png";
+      imagen = "/src/assets/weather/HeavyCloud.png";
     } else if (future.list[root].weather[0].description === "broken clouds") {
-      imagen = "/src/assets/weather-app-master/LightCloud.png";
+      imagen = "/src/assets/weather/LightCloud.png";
     } else if (future.list[root].weather[0].description === "clear sky") {
-      imagen = "/src/assets/weather-app-master/Clear.png";
+      imagen = "/src/assets/weather/Clear.png";
     } else if (future.list[root].weather[0].description === "heavy rain") {
-      imagen = "/src/assets/weather-app-master/HeavyRain.png";
+      imagen = "/src/assets/weather/HeavyRain.png";
     } else if (future.list[root].weather[0].description === "thunder storm") {
-      imagen = "/src/assets/weather-app-master/Thunderstorm.png";
+      imagen = "/src/assets/weatherThunderstorm.png";
     } else if (future.list[root].weather[0].description === "sleet") {
-      imagen = "/src/assets/weather-app-master/Sleet.png";
+      imagen = "/src/assets/weather/Sleet.png";
     } else if (future.list[root].weather[0].description === "light rain") {
-      imagen = "/src/assets/weather-app-master/LightRain.png";
+      imagen = "/src/assets/weather/LightRain.png";
     } else if (future.list[root].weather[0].description === "snow") {
-      imagen = "/src/assets/weather-app-master/Snow.png";
+      imagen = "/src/assets/weather/Snow.png";
     }
 
     return imagen;

@@ -55,10 +55,21 @@ div > img {
   background-color: #1e213a;
   width: 50%;
   display: flex;
-  justify-content: center;
   font-size: 150%;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+}
+#pr {
+  
+  background-color: #dee0e1;
+  width: 68%;
+  height: 3px;
+} 
+#sec{
+    background-color: yellow;
+    width: 83%;
+    height: 3px;
 }
 
 .fsmiddleBox {
@@ -78,6 +89,8 @@ div > img {
   font-size: 150%;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+
 }
 
 /* left box styles */
