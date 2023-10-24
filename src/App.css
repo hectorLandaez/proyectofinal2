@@ -1,5 +1,6 @@
 * {
   color: #dee0e1;
+  margin: 0px;
 }
 
 #mid {
@@ -100,6 +101,12 @@ div > img {
   height: 100%;
 }
 
+.fondo {
+  position: absolute;
+  width: 139%;
+  height: 129%;
+  opacity: 16%;
+}
 .leftInformation {
   display: flex;
   flex-direction: column;
@@ -108,7 +115,7 @@ div > img {
 }
 
 .temperature {
-  font-size: 5em;
+  font-size: 450%;
   margin: 0px;
   margin-top: 15%;
 }
@@ -206,4 +213,74 @@ form > button {
   border-style: solid;
   border-color: #6e707a;
   color: #6e707a;
+}
+
+@media (max-width:800px) { 
+  .main {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    height: 100%;
+}
+.leftBox {
+  background-color: #1e213a;
+  width: 100%;
+  height: 30%;
+}
+#mid {
+  height: 100%; 
+}
+.topBox {
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.div1 {
+  width: 40%;
+}
+.rightBox {
+  height: 800px;
+  display: flex;
+  flex-direction: column
+}
+.fmiddleBox {
+  display: flex;
+  height: 30%;
+  gap: 8%;
+  flex-wrap: wrap;
+  margin-top: 4%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.middleBox {
+  background-color: #1e213a;
+  width: 100%;
+  display: flex;
+  font-size: 150%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 42%;
+}
+.fsmiddleBox {
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+  gap: 8%;
+  flex-wrap: nowrap;
+  margin-top: 4%;
+  flex-direction: column;
+}
+.smiddleBox {
+  background-color: #1e213a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 238px;
+}
 }

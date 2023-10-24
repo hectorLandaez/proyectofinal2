@@ -8,12 +8,16 @@ function useCitie() {
   const getData = async (url, setState) => {
     try {
       const res = await fetch(url);
+
       const resJson = await res.json();
+
       setState(resJson);
+      
     } catch (error) {
       console.log(error);
     }
   };
+
   useEffect(() => {
  getData(
       `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=64cffd0b66699e7fe43e5043bdc683f8&units=metric`,
