@@ -83,11 +83,15 @@ function App() {
         <div className="main">
           <div className="leftBox">
           <div className="divMiAdrres"><button className="btc" onClick={handleLocation}>c</button></div>
+          <img src="./react.SVG" alt="" />
+          <img src="react.SVG" alt="" />
+          <img src="../react.SVG" alt="" />
+
             <Leftbox
               temp={data.main.temp}
               weather={data.weather[0].description}
               name={data.name}
-              fimg={"react.svg"}
+              fimg={"../react.svg"}
             ></Leftbox>
             <div id="firstDiv-Second">
               <div>
