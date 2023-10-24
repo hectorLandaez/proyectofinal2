@@ -93,7 +93,6 @@ div > img {
   justify-content: space-evenly;
 
 }
-
 /* left box styles */
 .leftBox {
   background-color: #1e213a;
@@ -147,6 +146,8 @@ div > img {
   background-color: #6e707a;
   border: none;
   color: #dee0e1;
+  width: 50%;
+
 }
 
 .btc {
@@ -154,6 +155,7 @@ div > img {
   background-color: #6e707a;
   border: none;
   color: #dee0e1;
+  height: 2%;
 }
 
 .leftInformation > img {
@@ -204,6 +206,14 @@ li {
   border: none;
 }
 
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
 form > button {
   color: black;
 }
@@ -213,8 +223,35 @@ form > button {
   border-style: solid;
   border-color: #6e707a;
   color: #6e707a;
+  width: 80%;
+  margin-right: 2%;
 }
-
+#inputD{
+  background-color: #1e213a;
+  border-style: solid;
+  border-color: #6e707a;
+  color: #6e707a;
+  margin-top: 4%;
+  width: 100%;
+}
+.citybtns{
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+}
+#firstDiv-Second > div{
+    display: flex;
+    flex-direction: column;
+}
+#cerrar{
+  width: 20%;
+}
+.divMiAdrres{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
 @media (max-width:800px) { 
   .main {
     display: flex;

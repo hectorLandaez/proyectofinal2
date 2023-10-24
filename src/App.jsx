@@ -6,7 +6,8 @@ import TopBox from "./components/TopBox";
 import OCultar from "./components/Ocultar";
 
 function App() {
-  const { data, changeCity, future } = useCitie();
+  
+  const { data, changeCity, future , handleClick,handleLocation} = useCitie();
 
   const mimg = () => {
     if (data && data.weather && data.weather[0] && data.weather[0].main) {
@@ -81,25 +82,32 @@ function App() {
       {data !== null ? (
         <div className="main">
           <div className="leftBox">
+          <div className="divMiAdrres"><button className="btc" onClick={handleLocation}>c</button></div>
             <Leftbox
               temp={data.main.temp}
               weather={data.weather[0].description}
               name={data.name}
-              fimg={"src/assets/react.svg"}
+              fimg={"react.svg"}
             ></Leftbox>
             <div id="firstDiv-Second">
-              <button onClick={() => OCultar("firstDiv-Second", "allLeftbox")}>
-                cerrar
+              <div>
+              <button id ='cerrar'onClick={() => OCultar("firstDiv-Second", "allLeftbox")}>
+                c
               </button>
               <form onSubmit={changeCity}>
                 <input type="text" placeholder="enter a city" id="inputC" />
                 <button
                   type="submit"
-                  onClick={() => OCultar("firstDiv-Second", "allLeftbox")}
-                >
+                  onClick={() => OCultar("firstDiv-Second", "allLeftbox")} >
                   search
                 </button>
+                <div className="citybtns">
+                  </div>         
               </form>
+              </div>
+              <button value='london' onClick={handleClick} id="inputD"> London </button>
+                <button value='barcelona' onClick={handleClick}id="inputD"> barcelona </button>               
+                <button value='long beach' onClick={handleClick}id="inputD"> long beach </button> 
             </div>
           </div>
 
