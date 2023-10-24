@@ -87,7 +87,7 @@ function App() {
               temp={data.main.temp}
               weather={data.weather[0].description}
               name={data.name}
-              fimg={mimg()}
+              fimg={"public/vite.svg"}
             ></Leftbox>
             <div id="firstDiv-Second">
               <div>
