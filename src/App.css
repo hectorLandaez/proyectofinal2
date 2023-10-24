@@ -149,6 +149,7 @@ div > img {
   border: none;
   color: #dee0e1;
   width: 50%;
+  cursor: pointer;
 
 }
 
@@ -158,6 +159,7 @@ div > img {
   border: none;
   color: #dee0e1;
   height: 2%;
+  cursor: pointer;
 }
 
 .leftInformation > img {
@@ -235,6 +237,7 @@ form > button {
   color: #6e707a;
   margin-top: 4%;
   width: 100%;
+  cursor: pointer;
 }
 .citybtns{
   display: flex;
@@ -247,6 +250,7 @@ form > button {
 }
 #cerrar{
   width: 20%;
+  color: black;
 }
 .divMiAdrres{
     display: flex;
