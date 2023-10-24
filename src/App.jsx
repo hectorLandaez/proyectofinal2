@@ -82,16 +82,12 @@ function App() {
       {data !== null ? (
         <div className="main">
           <div className="leftBox">
-          <div className="divMiAdrres"><button className="btc" onClick={handleLocation}>c</button></div>
-          <img src="./react.SVG" alt="" />
-          <img src="react.SVG" alt="" />
-          <img src="../react.SVG" alt="" />
-
+          <div className="divMiAdrres"><button className="btc" onClick={handleLocation} >c</button></div>
             <Leftbox
               temp={data.main.temp}
               weather={data.weather[0].description}
               name={data.name}
-              fimg={"../react.svg"}
+              fimg={mimg()}
             ></Leftbox>
             <div id="firstDiv-Second">
               <div>
@@ -135,6 +131,7 @@ function App() {
                 mimg34={simg(34)}
               ></TopBox>
             ) : null}
+            <div className="h1"><h2> today's highlights</h2></div>
             <RightBox
               speed={data.wind.speed}
               humidity={data.main.humidity}

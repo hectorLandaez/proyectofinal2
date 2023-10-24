@@ -135,7 +135,9 @@ div > img {
   margin: 0px;
   margin-top: 5%;
 }
-
+.h1{
+  margin-top: 5%;
+}
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -268,13 +270,19 @@ form > button {
   height: 100%; 
 }
 .topBox {
-  display: flex;
-  gap: 1.5rem;
-  height: 100%;
-  flex-wrap: wrap;
+
+    display: flex;
+    gap: 1.5rem;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 }
 .div1 {
   width: 40%;
+}
+.div1 > span {
+  font-size: 1rem;
 }
 .rightBox {
   height: 800px;
@@ -319,5 +327,43 @@ form > button {
   align-items: center;
   justify-content: space-evenly;
   height: 238px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 4%;
+  height: 50px;
+}
+
+.search{
+  font-size: 1.2rem;
+}
+.divMiAdrres{
+  height: 20px;
+  height: 40px;
+}
+.btc{
+  font-size: 2rem;
+  height: 100%;
+}
+
+.city{
+  font-size: 30px;
+}
+.day{
+  font-size: 18px;
+}
+.fmiddleBox {
+  height: 60%;
+}
+.fsmiddleBox {
+  height: 30%;
+}
+#firstDiv-Second {
+  position: relative;
+  display: none;
+  font-size: 1rem;
+  height: 700px;
 }
 }
