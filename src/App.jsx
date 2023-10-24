@@ -13,11 +13,11 @@ function App() {
       let imagen = "/src/assets/weather/LightCloud.png";
       switch (data.weather[0].main) {
         case "light rain":
-          imagen = "/src/assets/weather/LightRain.png";
+          imagen = "src/assets/weather/LightRain.png";
           break;
         case "moderate rain":
         case "Clouds":
-          imagen = "/src/assets/weather/Shower.png";
+          imagen = "src/assets/weather/Shower.png";
           break;
         case "overcast clouds":
           imagen = "src/assets/weather/HeavyCloud.png";
@@ -48,7 +48,7 @@ function App() {
       return "src/assets/weather/DefaultImage.png";
     }
   };
-  
+
   const simg = (root) => {
     let imagen = "src/assets/weather/LightCloud.png";
     if (future.list[root].weather[0].description === "light rain") {
@@ -71,12 +71,11 @@ function App() {
       imagen = "src/assets/weather/LightRain.png";
     } else if (future.list[root].weather[0].description == "snow") {
       imagen = "src/assets/weather/Snow.png";
-      
     }
 
     return imagen;
   };
-  
+
   return (
     <>
       {data !== null ? (
@@ -86,7 +85,7 @@ function App() {
               temp={data.main.temp}
               weather={data.weather[0].description}
               name={data.name}
-              fimg ={mimg()}
+              fimg={"src/assets/react.svg"}
             ></Leftbox>
             <div id="firstDiv-Second">
               <button onClick={() => OCultar("firstDiv-Second", "allLeftbox")}>
@@ -94,10 +93,16 @@ function App() {
               </button>
               <form onSubmit={changeCity}>
                 <input type="text" placeholder="enter a city" id="inputC" />
-                <button type="submit" onClick={() => OCultar("firstDiv-Second", "allLeftbox")}>search</button>
+                <button
+                  type="submit"
+                  onClick={() => OCultar("firstDiv-Second", "allLeftbox")}
+                >
+                  search
+                </button>
               </form>
             </div>
           </div>
+
           <div id="mid">
             {future ? (
               <TopBox
