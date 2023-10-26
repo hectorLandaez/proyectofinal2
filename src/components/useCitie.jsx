@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import OCultar from "./Ocultar";
 function useCitie() {
   const [data, setData] = useState(null);
   const [city, setCity] = useState("lima");
@@ -27,10 +28,10 @@ function useCitie() {
   }, [data]);
   
 
-  useEffect(() => {
+/*   useEffect(() => {
     getData("list.json", setAll);
   }, [data]);
-
+ */
 
 
   useEffect(() => {
@@ -69,6 +70,10 @@ function useCitie() {
   const handleClick = (e) => {
     e.preventDefault();
     setCity(e.target.value);
+      OCultar("firstDiv-Second", "allLeftbox");
+      OCultar("firstDiv-Second", "btc");
+      {console.log(data.weather[0].main)}
+      console.log(data.weather[0].description)
   };
 
 

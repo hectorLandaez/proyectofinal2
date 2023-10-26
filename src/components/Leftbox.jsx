@@ -15,8 +15,12 @@ return (
       {data && future !== null ? (
         <div id='allLeftbox'>
           <div className="buttons">
-            <button className="search" onClick={()=>OCultar('allLeftbox','firstDiv-Second')}>Search for places</button>
-            
+          <button className="search" onClick={() => {
+  OCultar('allLeftbox', 'firstDiv-Second');
+  OCultar('btc', 'firstDiv-Second');
+}}>
+  Search for places
+</button>
           </div>
           <div className="leftInformation" id="letinfo">
 {/*           <div className="fondo" ><img src='src/assets/weather/Cloud-background.png' alt=''></img></div>
