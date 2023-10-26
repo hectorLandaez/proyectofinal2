@@ -11,67 +11,67 @@ function App() {
 
   const mimg = () => {
     if (data && data.weather && data.weather[0] && data.weather[0].main) {
-      let imagen = "/src/assets/weather/LightCloud.png";
+      let imagen = "./LightCloud.png";
       switch (data.weather[0].main) {
         case "light rain":
-          imagen = "src/assets/weather/LightRain.png";
+          imagen = "./LightRain.png";
           break;
         case "moderate rain":
         case "Clouds":
-          imagen = "src/assets/weather/Shower.png";
+          imagen = "./Shower.png";
           break;
         case "overcast clouds":
-          imagen = "src/assets/weather/HeavyCloud.png";
+          imagen = "./HeavyCloud.png";
           break;
         case "broken clouds":
-          imagen = "src/assets/weather/LightCloud.png";
+          imagen = "./LightCloud.png";
           break;
         case "clear sky":
-          imagen = "src/assets/weather/Clear.png";
+          imagen = "./Clear.png";
           break;
         case "heavy rain":
-          imagen = "src/assets/weather/HeavyRain.png";
+          imagen = "./HeavyRain.png";
           break;
         case "thunder storm":
-          imagen = "src/assets/weather/Thunderstorm.png";
+          imagen = "./Thunderstorm.png";
           break;
         case "sleet":
-          imagen = "src/assets/weather/Sleet.png";
+          imagen = "./Sleet.png";
           break;
         case "snow":
-          imagen = "src/assets/weather/Snow.png";
+          imagen = "./Snow.png";
           break;
         default:
           break;
       }
       return imagen;
     } else {
-      return "src/assets/weather/DefaultImage.png";
+      return "./LightCloud.png";
     }
   };
 
   const simg = (root) => {
     let imagen = "src/assets/weather/LightCloud.png";
     if (future.list[root].weather[0].description === "light rain") {
-      imagen = "src/assets/weather/LightRain.png";
+      imagen = "./LightRain.png";
     } else if (future.list[root].weather[0].description == "moderate rain") {
-      imagen = "src/assetsweather/Shower.png";
+      imagen = "./Shower.png";
     } else if (future.list[root].weather[0].description == "overcast clouds") {
-      imagen = "src/assets/weather/HeavyCloud.png";
+      imagen = "./HeavyCloud.png";
     } else if (future.list[root].weather[0].description == "broken clouds") {
-      imagen = "src/assets/weather/LightCloud.png";
+      imagen = "./LightCloud.png";
     } else if (future.list[root].weather[0].description == "clear sky") {
-      imagen = "src/assets/weather/Clear.png";
+      imagen = "./Clear.png";
     } else if (future.list[root].weather[0].description == "heavy rain") {
-      imagen = "src/assets/weather/HeavyRain.png";
+      imagen = "./HeavyRain.png";
     } else if (future.list[root].weather[0].description == "thunder storm") {
-      imagen = "src/assets/weather/Thunderstorm.png";
+      imagen = "./Thunderstorm.png";
     } else if (future.list[root].weather[0].description == "sleet") {
-      imagen = "src/assets/weather/Sleet.png";
+      imagen = "./Sleet.png";
     } else if (future.list[root].weather[0].description == "light rain") {
-      imagen = "src/assets/weather/LightRain.png";
+      imagen = "./LightRain.png";
     } else if (future.list[root].weather[0].description == "snow") {
-      imagen = "src/assets/weather/Snow.png";
+      imagen = "./Snow.png";
     }
 
     return imagen;
@@ -87,7 +87,7 @@ function App() {
               temp={data.main.temp}
               weather={data.weather[0].description}
               name={data.name}
-              fimg={'./Clear.png'}
+              fimg={mimg()}
             ></Leftbox>
             <div id="firstDiv-Second">
               <div>
