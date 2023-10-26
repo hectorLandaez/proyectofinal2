@@ -87,8 +87,11 @@ function App() {
               temp={data.main.temp}
               weather={data.weather[0].description}
               name={data.name}
-              fimg={mimg()}
+              fimg={'./vite.svg'}
             ></Leftbox>
+            <div> <img src="public/vite.svg" alt="" /></div>
+            <div> <img src="./public/vite.svg" alt="" /></div>
+            <div> <img src="/public/vite.svg" alt="" /></div>
             <div id="firstDiv-Second">
               <div>
               <button id ='cerrar'onClick={() => OCultar("firstDiv-Second", "allLeftbox")}>
