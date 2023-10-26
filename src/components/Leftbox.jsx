@@ -23,8 +23,8 @@ return (
 </button>
           </div>
           <div className="leftInformation" id="letinfo">
-{/*           <div className="fondo" ><img src='src/assets/weather/Cloud-background.png' alt=''></img></div>
- */}            <img src={props.fimg} alt="" />
+         <div className="fondo" ><img src='Cloud-background.png' alt=''></img></div>
+             <img src={props.fimg} alt="" />
             <h1 className="temperature">{props.temp}°c</h1>
             <p className="climate">{props.weather}</p>
             <p className="day">today . {getCurrentDate()}</p>
