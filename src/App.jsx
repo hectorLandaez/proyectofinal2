@@ -4,29 +4,29 @@ import RightBox from "./components/RightBox";
 import useCitie from "./components/useCitie";
 import TopBox from "./components/TopBox";
 import OCultar from "./components/Ocultar";
+import React from "react";
+import { InputText } from "primereact/inputtext";
 
 function App() {
-  
-  const { data, changeCity, future , handleClick,handleLocation} = useCitie();
+  const { data, changeCity, future, handleClick, handleLocation } = useCitie();
 
   const mimg = () => {
     if (data && data.weather && data.weather[0] && data.weather[0].main) {
       let imagen = "./LightCloud.png";
       switch (data.weather[0].main) {
-        case "light rain":
+        case "Rain":
           imagen = "./LightRain.png";
           break;
         case "moderate rain":
-        case "Clouds":
           imagen = "./Shower.png";
           break;
-        case "overcast clouds":
+        case "Clouds":
           imagen = "./HeavyCloud.png";
           break;
         case "broken clouds":
           imagen = "./LightCloud.png";
           break;
-        case "clear sky":
+        case "Clear":
           imagen = "./Clear.png";
           break;
         case "heavy rain":
@@ -45,13 +45,13 @@ function App() {
           break;
       }
       return imagen;
-    } else {
-      return "./LightCloud.png";
     }
   };
 
+
+
   const simg = (root) => {
-    let imagen = "src/assets/weather/LightCloud.png";
+    let imagen = "./LightCloud.png";
     if (future.list[root].weather[0].description === "light rain") {
       imagen = "./LightRain.png";
     } else if (future.list[root].weather[0].description == "moderate rain") {
@@ -82,32 +82,61 @@ function App() {
       {data !== null ? (
         <div className="main">
           <div className="leftBox">
-          <div className="divMiAdrres"><button className="btc" onClick={handleLocation} >c</button></div>
-            <Leftbox
-              temp={data.main.temp}
-              weather={data.weather[0].description}
-              name={data.name}
-              fimg={mimg()}
-            ></Leftbox>
+            <div className="divMiAdrres">
+              <button id="btc" onClick={handleLocation}>
+                <span className="material-symbols-outlined">location_on</span>
+              </button>
+            </div>
+            {data ? (
+              <Leftbox
+                temp={data.main.temp}
+                weather={data.weather[0].main}
+                name={data.name}
+                fimg={mimg()}
+              ></Leftbox>
+            ) : null}
             <div id="firstDiv-Second">
               <div>
-              <button id ='cerrar'onClick={() => OCultar("firstDiv-Second", "allLeftbox")}>
-                c
-              </button>
-              <form onSubmit={changeCity}>
-                <input type="text" placeholder="enter a city" id="inputC" />
-                <button
-                  type="submit"
-                  onClick={() => OCultar("firstDiv-Second", "allLeftbox")} >
-                  search
-                </button>
-                <div className="citybtns">
-                  </div>         
-              </form>
+                <div className="cerrar">
+                  <button
+                    id="cerrar"
+                    onClick={() => {
+                      OCultar("firstDiv-Second", "allLeftbox");
+                      OCultar("firstDiv-Second", "btc");
+                    }}
+                  >
+                    <span className="material-symbols-outlined">close</span>{" "}
+                  </button>
+                </div>
+                <form onSubmit={changeCity}>
+                  <div className="card flex flex-wrap justify-content-center gap-3">
+                    <span className="p-input-icon-left">
+                      <i className="pi pi-search" />
+                      <InputText placeholder="city" id="inputC" />
+                    </span>
+                  </div>
+                  <button
+                    type="submit"
+                    onClick={() => {
+                      OCultar("firstDiv-Second", "allLeftbox");
+                      OCultar("firstDiv-Second", "btc");
+                    }}
+                  >
+                    search
+                  </button>
+                  <div className="citybtns"></div>
+                </form>
               </div>
-              <button value='london' onClick={handleClick} id="inputD"> London </button>
-                <button value='barcelona' onClick={handleClick}id="inputD"> barcelona </button>               
-                <button value='long beach' onClick={handleClick}id="inputD"> long beach </button> 
+
+              <button value="london" onClick={handleClick} id="inputD">
+                London
+              </button>
+              <button value="barcelona" onClick={handleClick} id="inputD">
+                barcelona
+              </button>
+              <button value="long beach" onClick={handleClick} id="inputD">
+                long beach
+              </button>
             </div>
           </div>
 
@@ -131,12 +160,16 @@ function App() {
                 mimg34={simg(34)}
               ></TopBox>
             ) : null}
-            <div className="h1"><h2> today's highlights</h2></div>
+            <div className="h1">
+              <h2> today's highlights</h2>
+            </div>
             <RightBox
               speed={data.wind.speed}
               humidity={data.main.humidity}
               visibility={data.visibility}
               pressure={data.main.pressure}
+              ancho={data.main.humidity}
+              direction={data.wind.deg}
             ></RightBox>
           </div>
         </div>
