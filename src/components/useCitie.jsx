@@ -52,7 +52,6 @@ function useCitie() {
 
   const handleSucces = (data) => {
     const { latitude, longitude } = data.coords;
-    console.log("tenemos la ubicacion", data);
     setLat(latitude);
     setLong(longitude);
   };
@@ -72,8 +71,6 @@ function useCitie() {
     setCity(e.target.value);
       OCultar("firstDiv-Second", "allLeftbox");
       OCultar("firstDiv-Second", "btc");
-      {console.log(data.weather[0].main)}
-      console.log(data.weather[0].description)
   };
 
 
